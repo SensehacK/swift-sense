@@ -7,12 +7,6 @@
 
 import Foundation
 
-public enum NetworkError: Error {
-    case requestBad
-    case requestDataFailed
-}
-
-
 public class Webservice {
     
     public init() { }
@@ -57,7 +51,7 @@ public class Webservice {
             // Check for data or error in callback
             guard let data = data,
                   error == nil else {
-                completion(.failure(.requestDataFailed))
+                completion(.failure(.requestDataFailedNetworkError))
                 return
             }
             
@@ -107,7 +101,7 @@ public class Webservice {
             // Check for data or error in callback
             guard let data = data,
                   error == nil else {
-                completion(.failure(.requestDataFailed))
+                completion(.failure(.requestDataFailedNetworkError))
                 return
             }
             
