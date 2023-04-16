@@ -17,6 +17,11 @@ After writing the same Network code in every project, I noticed that what if I c
 - Generic Network
     This has been added so far in `Webservice.swift` which takes care of basic error handling and making network requests.
 
+- Swift Combine Network 
+    This is available for iOS 13+ using Swift Combine framework option.
+    
+    
+
 
 ## Planned Features
 
@@ -26,3 +31,36 @@ After writing the same Network code in every project, I noticed that what if I c
     Next focus
 
 - Apple Hero Button
+
+
+## Usage
+
+Respective functions of the singleton class has appropriate documentation with their code usage in `Developer Documentation`.
+
+
+## Add Package
+
+### SPM
+
+Add this package to Xcode using Swift Package Manager (SPM).
+
+Open existing Xcode project. Select `File` -> `Add Package`.
+Enter this repository URL `https://github.com/SensehacK/swift-sense`
+Select the latest build or select `Upto Major Version`. This repository would be supporting `semantic versioning`.
+
+After the package has been added. Import it in your file using 
+`import swift_sense`
+
+
+## Update Package
+
+### SPM
+Open existing Xcode project. Select `File` -> `Packages` -> `Update to latest Package versions`
+It should check the default rules regaring package update rules and proceed with it appropriately.
+
+
+
+
+## Authored
+
+- [Kautilya Save](https://www.linkedin.com/in/kautilyasave/)

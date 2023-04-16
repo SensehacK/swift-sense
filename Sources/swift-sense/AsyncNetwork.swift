@@ -20,10 +20,10 @@ public class AsyncNetwork {
     /// Singleton
     /**
     Creates a singleton object of AsyncNetwork class in order to make network request using Apple's Reactive framework `Combine`
-     request using Generic type T: Codable and returns the two completioner handlers - Parsing & Result Type.
+     request using Generic type T: Codable, decodes it using JSON Decoder and returns the Future Result Type with `Success<T> Failure<Error>`.
    
    ```
-     AsyncNetwork.shared.getData(url: "https://dummyjson.com/quotes")
+     AsyncNetwork.shared.fetchData(url: "https://dummyjson.com/quotes")
    ```
    */
     public static let shared = AsyncNetwork()
