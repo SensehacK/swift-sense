@@ -56,9 +56,16 @@ public class CombineNetwork {
     */
     public func fetchData<T: Decodable>(url: String, id: Int? = nil, type: T.Type) -> Future<T, Error> {
         return Future<T, Error> { [weak self] promise in
+            var tempUrl: String
+            // Check for extra ID parameter
+            if let id = id {
+                tempUrl = url + "\(id)"
+            } else {
+                tempUrl = url
+            }
             
             guard let self = self,
-                  let url = URL(string: url) else {
+                  let url = URL(string: tempUrl) else {
                 return promise(.failure(NetworkError.invalidURL))
             }
             

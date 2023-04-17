@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 public extension HTTPURLResponse {
     
     /// Check for HTTP status code = 200 - successful
