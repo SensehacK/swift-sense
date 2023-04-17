@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  CombineNetwork.swift
 //  
 //
 //  Created by Kautilya Save on 4/15/23.
@@ -10,7 +10,7 @@ import Combine
 
 
 @available(iOS 13.0, *)
-public class AsyncNetwork {
+public class CombineNetwork {
     
     
     // Private properties
@@ -19,14 +19,9 @@ public class AsyncNetwork {
     
     /// Singleton
     /**
-    Creates a singleton object of AsyncNetwork class in order to make network request using Apple's Reactive framework `Combine`
-     request using Generic type T: Codable, decodes it using JSON Decoder and returns the Future Result Type with `Success<T> Failure<Error>`.
-   
-   ```
-     AsyncNetwork.shared.fetchData(url: "https://dummyjson.com/quotes")
-   ```
+    Creates a singleton object of CombineNetwork class in order to make network request using Apple's Reactive framework `Combine`
    */
-    public static let shared = AsyncNetwork()
+    public static let shared = CombineNetwork()
     
     
     /**
@@ -43,7 +38,7 @@ public class AsyncNetwork {
      var cancellables = Set<AnyCancellable>()
      var quotes: Quotes = []
      
-     AsyncNetwork.shared.fetchData(url: "https://dummyjson.com/quotes", type: Quotes.self)
+     CombineNetwork.shared.fetchData(url: "https://dummyjson.com/quotes", type: Quotes.self)
         .sink { completion in
             switch completion {
                 case .failure(let error):
@@ -110,7 +105,7 @@ public class AsyncNetwork {
      var cancellables = Set<AnyCancellable>()
      var quotes: [Quotes] = []
      
-     AsyncNetwork.shared.fetchData(url: "https://dummyjson.com/quotes", type: Quotes.self)
+     CombineNetwork.shared.fetchData(url: "https://dummyjson.com/quotes", type: Quotes.self)
         .sink { completion in
             switch completion {
                 case .failure(let error):
