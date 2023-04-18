@@ -1,0 +1,37 @@
+# This workflow will build a Swift project
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-swift
+
+name: Swift
+
+on:
+  push:
+    branches: [ "releases" ]
+  pull_request:
+    branches: [ "releases" ]
+
+jobs:
+  build:
+    name: Build
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - uses: swift-actions/setup-swift@v1
+      with:
+        swift-version: "5.8.0"
+    - name: Get swift version
+      run: swift --version # Swift 5.8.0
+    - name: Build
+      run: swift build -v
+    - name: Run tests
+      run: swift test -v
+      
+    - name: Upload coverage reports to Codecov
+      uses: codecov/codecov-action@v3
+    
+    - name: Swift Package Documentation Generator
+      uses: sersoft-gmbh/swifty-docs-action@v2
+      with:
+        output: docs
+        enable-inherited-docs: false
+        hosting-base-path: swift-sense

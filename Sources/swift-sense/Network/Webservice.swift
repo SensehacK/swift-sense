@@ -16,11 +16,6 @@ public class Webservice {
     /// Singleton
     /**
     Creates a singleton object of Webservice class in order to make network request using Apple's Foundation framework
-     request using Generic type T: Codable and returns the two completioner handlers - Parsing & Result Type.
-   
-   ```
-     Webservice.shared.fetch(url: "https://dummyjson.com/quotes")
-   ```
    */
     public static let shared = Webservice()
 
