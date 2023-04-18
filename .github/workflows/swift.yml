@@ -28,24 +28,9 @@ jobs:
       
     - name: Upload coverage reports to Codecov
       uses: codecov/codecov-action@v3
-
+    
     - name: Swift Package Documentation Generator
-      uses: sersoft-gmbh/swifty-docs-action@v2.0.3
-      # You may pin to the exact commit or the version.
-      # uses: sersoft-gmbh/swifty-docs-action@24e76778b73b058c417f578c7caa11f1f728b2ab
+      uses: sersoft-gmbh/swifty-docs-action@v2
       with:
-        # Explicit path ? maybe this works or else would have to resort to different path.
-        package-path: /Users/runner/work/swift-sense
         output: docs
-        
-#         # The path to the package.
-#         package-path: ${{github.workspace}}
-#         # The version to use for this package.
-#         enable-inherited-docs: false
-#         # Enables index building.
-#         enable-index-building: false
-#         # Enables the static hosting transformation.
-#         transform-for-static-hosting: false
-#         # The hosting base path to use.
-#         use-xcodebuild: false
-#         # The scheme to use for the xcodebuild invocation. Required if `use-xcodebuild` is true.
+        enable-inherited-docs: false
