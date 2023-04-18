@@ -34,3 +34,4 @@ jobs:
       with:
         output: docs
         enable-inherited-docs: false
+        hosting-base-path: swift-sense
