@@ -6,6 +6,6 @@ final class swift_senseTests: XCTestCase {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct
         // results.
-        XCTAssertEqual(swift_sense().text, "Hello, World!")
+        XCTAssertEqual(swift_sense().text, "Hello, SensehacK!")
     }
 }
