@@ -19,7 +19,7 @@ import SwiftUI
  - Returns: T: View
  - Warning: This View makes asynchronous network calls and displays the value in Async manner. There are no blocking calls.
  
-```
+```swift
 AsyncImageCache(url: url) { phase in
      switch phase {
      case .success(let image):
