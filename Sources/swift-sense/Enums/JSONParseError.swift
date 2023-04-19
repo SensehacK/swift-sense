@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum JSONParseError: Error {
+public enum JSONParseError: Error {
     case fileNotFound
     case dataInitialisation(error: Error)
     case decoding(error: Error)
