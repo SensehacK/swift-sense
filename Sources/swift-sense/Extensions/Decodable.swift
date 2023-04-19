@@ -20,7 +20,7 @@ public extension Decodable {
      - Returns: Result<Self, JSONParseError>
      - Warning: This is only available for `Decodable` but anyone who conforms to `Codable` should be fine.
      
-    ```
+    ```swift
      switch MealDetail.from(localJSON: "Local_JSON_Name") {
      case .success(let value):
          print(value)

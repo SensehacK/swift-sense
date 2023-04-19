@@ -30,7 +30,7 @@ public class Webservice {
      - Returns: Result<T? ,Error>
      - Warning: Safely unwraping of `T:Codable` is consumer's responsibility.
      
-    ```
+    ```swift
      Webservice().fetch(url: url) { data in
          return try? JSONDecoder().decode([T].self, from: data)
      } completion: { result in
@@ -80,7 +80,7 @@ public class Webservice {
      - Returns: Result<T? ,Error>
      - Warning: Safely unwraping of `T:Codable` is consumer's responsibility.
      
-    ```
+    ```swift
      Webservice().fetch(urlRequest: urlRequest) { data in
          return try? JSONDecoder().decode([T].self, from: data)
      } completion: { result in
