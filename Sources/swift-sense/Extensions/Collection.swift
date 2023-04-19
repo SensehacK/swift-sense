@@ -8,7 +8,7 @@
 import Foundation
 
 // Syntactic Sugar
-extension Collection {
+public extension Collection {
     /// Returns inverted Bool value for `isEmpty`
     var isNotEmpty: Bool { !isEmpty }
 }

@@ -59,7 +59,17 @@ Open existing Xcode project. Select `File` -> `Packages` -> `Update to latest Pa
 It should check the default rules regaring package update rules and proceed with it appropriately.
 
 
+## DocC Generation
 
+```bash
+swift package --allow-writing-to-directory ./docs \
+    generate-documentation --target swift-sense \
+    --disable-indexing \
+    --transform-for-static-hosting \
+    --hosting-base-path swift-sense \
+    --output-path ./docs
+
+```
 
 ## Authored
 

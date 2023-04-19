@@ -9,7 +9,7 @@ import Foundation
 
 // Source: https://stackoverflow.com/a/73789534/5177704
 
-extension Decodable {
+public extension Decodable {
     
 
     /**
