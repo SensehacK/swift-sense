@@ -32,7 +32,7 @@ public class AsyncNetwork {
      - Returns: async throws -> T
      - Warning: Async Await APIs could be limited to specific iOS versions.
      
-    ```
+    ```swift
      @Published var meals: Meal
 
      func fetchRecipe() async {
@@ -75,7 +75,7 @@ public class AsyncNetwork {
      - Returns: async throws -> T
      - Warning: Async Await APIs could be limited to specific iOS versions.
      
-    ```
+    ```swift
      @Published var meals: [Meal] = []
 
      func fetchRecipes() async {

@@ -34,7 +34,7 @@ public class CombineNetwork {
      - Returns: Future<T, Error>
      - Warning: Safely storing of the subscribes needs to be done via storing the sink return value in `AnyCancellable`.
      
-    ```
+    ```swift
      var cancellables = Set<AnyCancellable>()
      var quotes: Quotes = []
      
@@ -108,7 +108,7 @@ public class CombineNetwork {
      - Returns: Future<[T], Error>
      - Warning: Safely storing of the subscribes needs to be done via storing the sink return value in `AnyCancellable`.
      
-    ```
+    ```swift
      var cancellables = Set<AnyCancellable>()
      var quotes: [Quotes] = []
      
