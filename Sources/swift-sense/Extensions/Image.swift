@@ -7,7 +7,9 @@
 
 import SwiftUI
 
-@available(iOS 13.0, macOS 12.0, *)
+#if os(iOS)
+import UIKit
+@available(iOS 13.0, *)
 public extension Image {
     
     /**
@@ -25,3 +27,4 @@ public extension Image {
     }
     
 }
+#endif
