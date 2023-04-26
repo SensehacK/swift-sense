@@ -18,7 +18,7 @@ public class AsyncNetwork {
     /// Singleton
     /**
     Creates a singleton object of AsyncNetwork class in order to make network request using Apple's Swift Concurrency `Async/Await`
-   */
+    */
     public static let shared = AsyncNetwork()
     
     
