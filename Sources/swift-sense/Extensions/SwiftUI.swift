@@ -18,4 +18,38 @@ public extension View {
         modifier(DefaultButtonViewModifier(backgroundColor: backgroundColor))
     }
     
+    
+    
+    /**
+     # Adds corner radius
+     - Parameter radius: CGFloat value
+     - Parameter corners: UIRectCorner
+     
+     
+     Usage
+     
+     ```swift
+     View.Type
+        .cornerRadius(20, corners: [.topLeft, .bottomRight])
+     ```
+     Source: https://stackoverflow.com/a/58606176/5177704
+    */
+    func cornerRadius(_ radius: CGFloat, corners: UIRectCorner) -> some View {
+        clipShape(RoundedCorner(radius: radius, corners: corners))
+    }
+    
+}
+
+
+// Extension corner Radius
+@available(iOS 13.0, macOS 12.0, *)
+struct RoundedCorner: Shape {
+
+    var radius: CGFloat = .infinity
+    var corners: UIRectCorner = .allCorners
+
+    func path(in rect: CGRect) -> Path {
+        let path = UIBezierPath(roundedRect: rect, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+        return Path(path.cgPath)
+    }
 }
