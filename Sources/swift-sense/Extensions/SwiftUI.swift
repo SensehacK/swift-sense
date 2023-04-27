@@ -20,6 +20,13 @@ public extension View {
     
     
     
+    
+    
+}
+#if os(iOS)
+@available(iOS 15.0, *)
+public extension View {
+    
     /**
      # Adds corner radius
      - Parameter radius: CGFloat value
@@ -37,19 +44,8 @@ public extension View {
     func cornerRadius(_ radius: CGFloat, corners: UIRectCorner) -> some View {
         clipShape(RoundedCorner(radius: radius, corners: corners))
     }
-    
 }
 
 
-// Extension corner Radius
-@available(iOS 13.0, macOS 12.0, *)
-struct RoundedCorner: Shape {
 
-    var radius: CGFloat = .infinity
-    var corners: UIRectCorner = .allCorners
-
-    func path(in rect: CGRect) -> Path {
-        let path = UIBezierPath(roundedRect: rect, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
-        return Path(path.cgPath)
-    }
-}
+#endif

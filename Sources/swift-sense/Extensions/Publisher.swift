@@ -11,7 +11,7 @@ import Combine
 // Source Swift By Sundell
 // https://www.swiftbysundell.com/articles/calling-async-functions-within-a-combine-pipeline/
 // Async Await interop with Combine closures utilizing one op Future publishers.
-@available(iOS 14.0, macOS 10.15, *)
+@available(iOS 14.0, macOS 11.0, *)
 public extension Publisher {
 
     func asyncMap<T>(
