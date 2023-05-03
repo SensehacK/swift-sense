@@ -1,6 +1,6 @@
 
 /// Import module for swift helper classes
-public struct swift_sense {
+public struct SwiftSense {
     
     /// Default Hello Text!
     public private(set) var text = "Hello, SensehacK!"

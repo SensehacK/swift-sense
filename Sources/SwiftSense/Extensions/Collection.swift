@@ -15,7 +15,7 @@ public extension Collection {
 
 /// Check for index range in collection first before directly accessing the value at the given `index`.
 public extension Collection where Indices.Iterator.Element == Index {
-    public subscript(safe index: Index) -> Iterator.Element? {
+    subscript(safe index: Index) -> Iterator.Element? {
      return (startIndex <= index && index < endIndex) ? self[index] : nil
    }
 }
