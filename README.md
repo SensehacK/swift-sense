@@ -1,4 +1,4 @@
-# swift-sense
+# SwiftSense
 
 This package will help you eliminate boilerplate code and would add extension convenience to your project whenever needed.
 
@@ -63,10 +63,10 @@ It should check the default rules regaring package update rules and proceed with
 
 ```bash
 swift package --allow-writing-to-directory ./docs \
-    generate-documentation --target swift-sense \
+    generate-documentation --target SwiftSense \
     --disable-indexing \
     --transform-for-static-hosting \
-    --hosting-base-path swift-sense \
+    --hosting-base-path SwiftSense \
     --output-path ./docs
 
 ```
