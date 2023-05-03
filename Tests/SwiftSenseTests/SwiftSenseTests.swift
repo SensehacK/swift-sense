@@ -1,11 +1,11 @@
 import XCTest
-@testable import swift_sense
+@testable import SwiftSense
 
-final class swift_senseTests: XCTestCase {
+final class SwiftSenseTests: XCTestCase {
     func testExample() throws {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct
         // results.
-        XCTAssertEqual(swift_sense().text, "Hello, SensehacK!")
+        XCTAssertEqual(SwiftSense().text, "Hello, SensehacK!")
     }
 }
